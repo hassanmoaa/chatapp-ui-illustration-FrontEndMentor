@@ -102,6 +102,7 @@ body {
     background-color: var(--White);
     font-family: var(--rubik-ff);
     overflow: hidden;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 
