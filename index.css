@@ -101,10 +101,10 @@ picture {
 
 body {
     font-family: var(--rubik-ff);
-    /* background-image: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
-    background-position: ;
+    background-image: radial-gradient(circle at bottom, var(--Light-Magenta), var(--Light-Violet));
     background-repeat: no-repeat;
-    background-size: ; */
+    background-size: 50% 60%;
+
 
 }
 
@@ -112,16 +112,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 2rem;
-
-    border: 3px solid red;
+    padding: 2rem;
 }
 
 .mobile__width {
     max-width: 330px;
 }
 
+
+/*--------------Mobile Frame & Top Notch----------------*/
+
 .mobile__frame {
+    background-color: var(--White);
     border: 5px solid var(--White);
     border-radius: 25px;
     padding: .5rem;
@@ -130,17 +132,24 @@ body {
     -moz-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
-.mobile__frame--top-notch {}
+.mobile__frame--top-notch {
+    max-width: 55%;
+    position: relative;
+    left: 75px;
+    border: 8px solid var(--White);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
 
+/*----------------------Chat Header---------------------*/
 
 .chat__header {
     display: flex;
     align-items: center;
-    justify-content: ;
     background-image: linear-gradient(to left, var(--Light-Magenta), var(--Light-Violet));
-    padding: 1rem;
-
+    padding: 1.25rem;
+    margin-top: -15px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 7px;
@@ -153,11 +162,12 @@ body {
     border-radius: 50%;
     margin-left: .5rem;
     margin-right: .8rem;
+    cursor: pointer;
 }
 
 .chat__header--text h2 {
     color: var(--Light-Grayish-Violet--appUIbackground);
-    font-size: 1rem;
+    font-size: .95rem;
 }
 
 .chat__header--text p {
@@ -168,6 +178,7 @@ body {
 .fa-ellipsis-vertical,
 .fa-chevron-left {
     color: var(--White);
+    cursor: pointer;
 }
 
 .fa-ellipsis-vertical {
@@ -175,7 +186,7 @@ body {
 }
 
 
-
+/*------------Chat Body-----------*/
 
 .chat__body--ui {
     background-color: var(--Light-Grayish-Violet--appUIbackground);
@@ -233,7 +244,9 @@ body {
 
 .chat__body--options-node--row {
     background-image: linear-gradient(to right, var(--Light-Magenta), var(--Light-Violet));
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     max-width: 75%;
     padding: .4rem;
     margin-bottom: .6rem;
@@ -242,28 +255,30 @@ body {
 }
 
 .fa-spinner {
-    margin-right: 1rem;
-    color: white;
-    font-size: 1rem;
+    color: var(--Very-Light-Magenta--radioButton);
+    font-size: 1.1rem;
 }
 
 .text {
     color: var(--Light-Grayish-Violet--appUIbackground);
-
+    margin-right: 2rem;
 }
 
 .bold-white {
     color: var(--White);
     font-weight: 700;
     font-size: 1.2rem;
-    margin-left: 2rem;
 }
+
+
+/*----------------Message Box---------------*/
 
 .chat__message--box {
     background-color: var(--White);
     border-radius: 25px;
     margin: 1rem 0 .5rem 0;
     padding: .2rem;
+    cursor: text;
 }
 
 .chat__message--box span {
@@ -275,13 +290,15 @@ body {
 
 .fa-circle-chevron-right {
     position: relative;
-    left: 120px;
+    left: 125px;
+    top: 2px;
     font-size: 1.75rem;
     color: var(--Very-Dark-Desaturated-Violet--submitButton-BG);
+    cursor: pointer;
 }
 
 
-/*--------Main Section--------*/
+/*==================Main Section==================*/
 
 .main {
     margin-top: 5rem;
@@ -305,17 +322,21 @@ body {
 
 @media (min-width: 800px) {
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 5rem 2rem;
+    body {
+        background-size: 25% 95%;
+    }
 
+    .container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .mobile__width {
+        margin-left: 7rem;
     }
 
     .main {
-        max-width: 50%;
+        max-width: 40%;
         text-align: left;
     }
 }
